@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+
+<body class="d-flex flex-column px-auto mx-auto">
+
+  <div id="overlay" style="color: white;" onclick="off()">
+    <div id="text" class="text-center mt-4" style="font-size: 50px;"></div>
+    <p class="fs-3 text-center mt-3">We hope to see you on the Burning man event in Nevada, 2
+      days before labor day 1st of may<br /><br />Click on the Screen to go back</p>
+    <img id="burningman" src="https://c.tenor.com/DoGyA3UeyMIAAAAC/fire-on-fire.gif"
+      style="height: 100%; width: 100%; z-index: -1;" loop=infinite>
+  </div>
+
+
+  <div id="big-container">
+    <video id="videoHome" playsinline="" autoplay="autoplay" loop="loop" muted="muted" class="video-content-islink">
+      <source id="mp4_src"
+        src="https://upload.wikimedia.org/wikipedia/commons/transcoded/f/f3/Burning_Man_1995.webm/Burning_Man_1995.webm.480p.vp9.webm#t=00:07:01"
+        type="video/mp4">
+    </video>
+
+    <div class="container ">
+
+      <div class="row text-center mb-4 ">
+        <div class="col"></div>
+        <h1 class="mt-3">BURNING MAN 🔥</h1>
+      </div>
+
+      <div class="row text-center d-flex flex-wrap justify-content-center">
+        <div class="col">
+          <div class="h3">Use te alphabet below to guess the word, or Click hint to get a clue</div>
+          <div id="btn-container"></div>
+        </div>
+      </div>
+
+      <div class="chosen row d-flex flex-column">
+        <div class="row  d-flex mt-3 justify-content-center m-2">
+          <div class="d-flex justify-content-center flex-column  ">
+            <div class="d-flex mt-3 justify-content-center">
+              <button class="btn-hint btn btn-warning" id="btn-hint">
+                Hint
+              </button>
+              <button class="btn btn-danger" onClick="location.reload()" id="playAgain">Play Again</button>
+            </div>
+            <p class=" fs-3 text-center" id="hint"></p>
+          </div>
+        </div>
+
+        <div>
+          <p id="lives" class="d-flex justify-content-center"></p>
+        </div>
+        <div class="preview d-flex flex-column justify-content-center ">
+          <h4>Try to guess the correct word</h4>
+        </div>
+
+        <div class="d-flex">
+          <div id="portrait">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="./scripts/script.js"></script>
+
+</html>
